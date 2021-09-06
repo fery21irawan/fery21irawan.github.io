@@ -14,10 +14,10 @@ var socialtags = [{
     link: "https://www.linkedin.com/in/fery21irawan/"
 }, {
     img: "img/034-instagram.svg",
-    link: "https://gitlab.com/akshay2211"
+    link: "https://instagram.com/fery21irawan"
 }, {
     img: "img/045-facebook.svg",
-    link: "https://twitter.com/_akshay22"
+    link: "https://www.facebook.com/fery21irawan"
 }]
 
 function loadSocialIcons() {
