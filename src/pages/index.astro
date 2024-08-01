@@ -12,7 +12,7 @@ import Portfolio from '../components/Portfolio.astro'
 import BackToTop from '../components/BackToTop.astro'
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Welcome to Fery Irawan Profile.">
 	<header class="bg-base-100">
 		<div class="relative px-5 py-2 mt-2 flex justify-end">
 			<Theme />
@@ -69,36 +69,34 @@ import BackToTop from '../components/BackToTop.astro'
 		<BackToTop />
 		<Section id="profile" title="Profile">
 			<div class="flex flex-col lg:flex-row-reverse lg:gap-5 w-full">
-				<div class="lg:w-1/2">
-					<table class="table lg:rounded lg:shadow" data-aos="fade-up">
-						<tbody class="text-left">
-							<!-- row 1 -->
-							<tr>
-								<th class="w-1/4 text-left">Name</th>
-								<td>:</td>
-								<td>Fery Irawan</td>
-							</tr>
-							<!-- row 2 -->
-							<tr class="hover">
-								<th class="w-1/4 text-left">Birth</th>
-								<td>:</td>
-								<td>July, 1995</td>
-							</tr>
-							<!-- row 3 -->
-							<tr>
-								<th class="w-1/4 text-start"><span>Address</span></th>
-								<td>:</td>
-								<td>
-									Pamalian Village, East Kotawaringin, Central Kalimantan,
-									Indonesia
-								</td>
-							</tr>
-						</tbody>
-					</table>
+				<div class="lg:w-1/2 p-5">
+					<img
+						src="https://avatars.githubusercontent.com/u/20228547?v=4"
+						alt=""
+						srcset=""
+						class="rounded shadow- hover:cursor-zoom-in"
+					/>
+					<div>
+						<div class="flex justify-center gap-5 my-5">
+							<div>
+								<span class="block">Name:</span>
+								<span class="block">Birth:</span>
+								<span class="block">Address:</span>
+							</div>
+							<div>
+								<span class="block">Fery Irawan</span>
+								<span class="block">July, 1995</span>
+								<span class="block"
+									>Pamalian Village, East Kotawaringin, Central Kalimantan,
+									Indonesia</span
+								>
+							</div>
+						</div>
+					</div>
 				</div>
 
 				<div class="p-5 lg:w-3/4">
-					<h1 class="text-xl font-bold">About Me</h1>
+					<h1 class="text-4xl font-bold mb-3">About Me</h1>
 					<div class="leading-loose text-sm">
 						<p class="mb-1">
 							🚀 I am a Software Developer with experience in web and mobile
@@ -204,13 +202,17 @@ import BackToTop from '../components/BackToTop.astro'
 							<h2 class="text-sm font-semibold">{certificate.title}</h2>
 						</div>
 						<ul class="grid grid-cols-2 gap-2">
-							{certificate.datalist.map((datalist) => (
-								<li>
-									<a href="#">
-										<img src={datalist} alt="" />
-									</a>
-								</li>
-							))}
+							{certificate.datalist &&
+								certificate.datalist.map((datalist) => (
+									<li>
+										<a
+											class="hover:cursor-pointer link-certificates"
+											data-certificate={datalist.url}
+										>
+											<img src={datalist.url} alt="" loading="lazy" />
+										</a>
+									</li>
+								))}
 						</ul>
 					</div>
 				))
@@ -231,4 +233,46 @@ import BackToTop from '../components/BackToTop.astro'
 			</small>
 		</aside>
 	</footer>
+
+	<!-- Modal -->
+	<dialog id="my_modal_5" class="modal modal-middle duration-150 ease-in-out">
+		<div class="indicator w-full modal-boxz md:w-1/2">
+			<form method="dialog" class="indicator-item">
+				<button
+					class="btn btn-sm btn-circle btn-neutral border-0 absolute right-2 top-2"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						class="icon icon-tabler icons-tabler-outline icon-tabler-x"
+						><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+							d="M18 6l-12 12"></path><path d="M6 6l12 12"></path></svg
+					>
+				</button>
+			</form>
+			<div class="p-5">
+				<img id="modal-image" src="" alt="" />
+			</div>
+		</div>
+	</dialog>
 </Layout>
+
+<script is:inline>
+	const linkCertificates = document.getElementsByClassName('link-certificates')
+	Array.from(linkCertificates).forEach((link) => {
+		link.addEventListener('click', () => {
+			const certificateUrl = link.dataset.certificate
+			const dialog = document.getElementById('my_modal_5')
+			const image = document.getElementById('modal-image')
+			image.src = certificateUrl
+			dialog.showModal()
+		})
+	})
+</script>

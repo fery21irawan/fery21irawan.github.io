@@ -1,36 +1,26 @@
+import { getList } from '../utils/imagekit'
+
+const getCertificate = async (path: string) => {
+	const fullpath = `ferys2195/certificates/${path}`
+	return await getList(fullpath)
+}
+
 const certificates = [
 	{
 		title: 'Front End Web',
-		datalist: [
-			'../public/certificates/11-Menjadi Front End Web Developer Expert-page-00001.jpg',
-			'../public/certificates/11-Menjadi Front End Web Developer Expert-page-00001.jpg',
-			'../public/certificates/11-Menjadi Front End Web Developer Expert-page-00001.jpg',
-			'../public/certificates/11-Menjadi Front End Web Developer Expert-page-00001.jpg',
-		],
+		datalist: await getCertificate('Front-End-Web'),
 	},
 	{
 		title: 'Data Science & Machine Learning',
-		datalist: [
-			'../public/certificates/11-Menjadi Front End Web Developer Expert-page-00001.jpg',
-			'../public/certificates/11-Menjadi Front End Web Developer Expert-page-00001.jpg',
-			'../public/certificates/11-Menjadi Front End Web Developer Expert-page-00001.jpg',
-		],
+		datalist: await getCertificate('Data-Science'),
 	},
 	{
 		title: 'Android',
-		datalist: [
-			'../public/certificates/11-Menjadi Front End Web Developer Expert-page-00001.jpg',
-			'../public/certificates/11-Menjadi Front End Web Developer Expert-page-00001.jpg',
-			'../public/certificates/11-Menjadi Front End Web Developer Expert-page-00001.jpg',
-		],
+		datalist: await getCertificate('Android'),
 	},
 	{
 		title: 'Others',
-		datalist: [
-			'../public/certificates/11-Menjadi Front End Web Developer Expert-page-00001.jpg',
-			'../public/certificates/11-Menjadi Front End Web Developer Expert-page-00001.jpg',
-			'../public/certificates/11-Menjadi Front End Web Developer Expert-page-00001.jpg',
-		],
+		datalist: await getCertificate('Others'),
 	},
 ]
 
