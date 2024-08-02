@@ -1,0 +1,23 @@
+{
+  "name": "proper-pulsar",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.3.5",
+    "imagekit": "^5.0.1",
+    "tailwindcss": "^3.4.1"
+  },
+  "devDependencies": {
+    "daisyui": "^4.6.1",
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.11.0"
+  }
+}
