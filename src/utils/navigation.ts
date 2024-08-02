@@ -11,9 +11,9 @@ const navigation = [
 		link: '#certificates',
 		title: 'Certificates',
 	},
-	{
-		link: '#portfolio',
-		title: 'Portfolio',
-	},
+	// {
+	// 	link: '#portfolio',
+	// 	title: 'Portfolio',
+	// },
 ]
 export { navigation }
