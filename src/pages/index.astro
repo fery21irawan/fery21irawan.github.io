@@ -70,12 +70,14 @@ import BackToTop from '../components/BackToTop.astro'
 		<Section id="profile" title="Profile">
 			<div class="flex flex-col lg:flex-row-reverse lg:gap-5 w-full">
 				<div class="lg:w-1/2 p-5">
-					<img
-						src="https://avatars.githubusercontent.com/u/20228547?v=4"
-						alt=""
-						srcset=""
-						class="rounded shadow- hover:cursor-zoom-in"
-					/>
+					<div>
+						<img
+							src="https://avatars.githubusercontent.com/u/20228547?v=4"
+							alt=""
+							srcset=""
+							class="rounded shadow-sm hover:scale-90 hover:translate-x-4 hover:-translate-y-4 transition-transform duration-500"
+						/>
+					</div>
 					<div>
 						<div class="flex justify-center gap-5 my-5">
 							<div>
@@ -209,7 +211,12 @@ import BackToTop from '../components/BackToTop.astro'
 											class="hover:cursor-pointer link-certificates"
 											data-certificate={datalist.url}
 										>
-											<img src={datalist.url} alt="" loading="lazy" />
+											<img
+												src={datalist.url}
+												alt=""
+												loading="lazy"
+												class="hover:opacity-90 hover:scale-95 transition-all duration-300"
+											/>
 										</a>
 									</li>
 								))}
