@@ -1,6 +1,6 @@
 const socialMedia = [
-  {
-    icon: /*html*/ `
+	{
+		icon: /*html*/ `
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		class="icon icon-tabler icon-tabler-brand-facebook-filled"
@@ -20,11 +20,11 @@ const socialMedia = [
 		fill="currentColor"></path>
 	</svg>
 		`,
-    title: 'Facebook',
-    link: '',
-  },
-  {
-    icon: /*html*/ `
+		title: 'Facebook',
+		link: 'https://www.facebook.com/ferys2195',
+	},
+	{
+		icon: /*html*/ `
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		class="icon icon-tabler icon-tabler-brand-github-filled"
@@ -44,11 +44,11 @@ const socialMedia = [
 			fill="currentColor"></path>
 	</svg>
 	`,
-    title: 'Github',
-    link: '',
-  },
-  {
-    icon: /*html*/ `
+		title: 'Github',
+		link: 'https://github.com/ferys2195',
+	},
+	{
+		icon: /*html*/ `
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		class="icon icon-tabler icon-tabler-brand-x"
@@ -66,11 +66,11 @@ const socialMedia = [
 		<path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
 	</svg>
 	`,
-    title: 'X',
-    link: '',
-  },
-  {
-    icon: /*html*/ `
+		title: 'X',
+		link: 'https://x.com/ferys2195',
+	},
+	{
+		icon: /*html*/ `
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		class="icon icon-tabler icon-tabler-brand-medium"
@@ -94,11 +94,11 @@ const socialMedia = [
 		<path d="M15 9l0 6"></path>
 	</svg>
 	`,
-    title: 'Medium',
-    link: '',
-  },
-  {
-    icon: /*html*/ `
+		title: 'Medium',
+		link: 'https://medium.com/@ferys2195',
+	},
+	{
+		icon: /*html*/ `
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		class="icon icon-tabler icon-tabler-brand-linkedin"
@@ -121,8 +121,8 @@ const socialMedia = [
 		<path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
 		</svg>
 	`,
-    title: 'Linkedin',
-    link: '',
-  },
+		title: 'Linkedin',
+		link: 'https://www.linkedin.com/in/ferys2195',
+	},
 ]
 export { socialMedia }
