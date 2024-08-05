@@ -24,10 +24,13 @@ import BackToTop from '../components/BackToTop.astro'
 					src={profile.imageUrl}
 					alt=""
 					srcset=""
+					data-aos="fade-down"
 				/>
 				<figcaption class="text-center mt-2">
 					<h1 class="font-semibold text-2xl lg:text-5xl lg:mb-2">
-						<span class="flex items-baseline justify-center gap-x-1"
+						<span
+							class="flex items-baseline justify-center gap-x-1"
+							data-aos="fade-right"
 							>{profile.name}
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -42,13 +45,13 @@ import BackToTop from '../components/BackToTop.astro'
 							>
 						</span>
 					</h1>
-					<p class="text-sm lg:text-xl">{profile.jobs}</p>
+					<p class="text-sm lg:text-xl" data-aos="fade-left">{profile.jobs}</p>
 				</figcaption>
 				<div class="mt-2 px-5 w-2/2">
 					<ul class="flex flex-wrap justify-center">
 						{
-							socialMedia.map((social) => (
-								<li>
+							socialMedia.map((social, i) => (
+								<li data-aos="fade-up" data-aos-delay={100 * i}>
 									<a
 										href={social.link}
 										class="btn btn-ghost btn-sm"
@@ -88,10 +91,10 @@ import BackToTop from '../components/BackToTop.astro'
 							src="https://avatars.githubusercontent.com/u/20228547?v=4"
 							alt=""
 							srcset=""
-							class="rounded shadow-sm hover:scale-90 hover:translate-x-4 hover:-translate-y-4 transition-transform duration-500"
+							class="hidden md:block rounded shadow-sm hover:scale-90 hover:translate-x-4 hover:-translate-y-4 transition-transform duration-500"
 						/>
 					</div>
-					<div>
+					<div data-aos="zoom-in">
 						<div class="flex justify-center gap-5 my-5">
 							<div>
 								<span class="block">Name:</span>
@@ -111,8 +114,8 @@ import BackToTop from '../components/BackToTop.astro'
 				</div>
 
 				<div class="p-5 lg:w-3/4">
-					<h1 class="text-4xl font-bold mb-3">About Me</h1>
-					<div class="leading-loose text-sm">
+					<h1 class="text-3xl font-bold mb-3" data-aos="fade-left">About Me</h1>
+					<div class="leading-loose">
 						<p class="mb-1">
 							🚀 I am a Software Developer with experience in web and mobile
 							application development. My main expertise involves programming
@@ -122,7 +125,7 @@ import BackToTop from '../components/BackToTop.astro'
 							designing and implementing REST APIs to support integration and
 							communication between systems.
 						</p>
-						<p class="mb-1">
+						<p class="mb-1" data-aos="fade-right">
 							💻 In the course of my career, I have successfully created
 							innovative and efficient solutions using Laravel and CI3 to build
 							reliable and scalable web applications. My deep understanding of
@@ -131,17 +134,17 @@ import BackToTop from '../components/BackToTop.astro'
 							I also have significant experience in building native Android apps
 							using Kotlin programming language and Android Studio IDE.
 						</p>
-						<p class="mb-1">
+						<p class="mb-1" data-aos="fade-right" data-aos-delay="100">
 							🎨 In addition, I have expertise in using Tailwind CSS to design
 							clean, efficient, and aesthetically pleasing interfaces.
 						</p>
-						<p class="mb-1">
+						<p class="mb-1" data-aos="fade-right" data-aos-delay="200">
 							🌐 Currently, I am developing skills in Python programming
 							language and am studying the field of Data Science. This opens up
 							new opportunities for me to combine my technical expertise with
 							data analysis insights and smart decision making.
 						</p>
-						<p class="mb-1">
+						<p class="mb-1" data-aos="fade-right" data-aos-delay="300">
 							🔍 I have real experience in building REST APIs and Web Apps using
 							Laravel Framework, Astrojs, NextJS and real experience in building
 							native Android Apps using Android Studio and Kotlin programming
@@ -149,7 +152,11 @@ import BackToTop from '../components/BackToTop.astro'
 							continuous learning and development, and believe that technology
 							can shape the future.
 						</p>
-						<p class="mb-1 font-semibold">
+						<p
+							class="mb-1 font-semibold"
+							data-aos="fade-right"
+							data-aos-delay="400"
+						>
 							Open to discussion, collaboration, and new opportunities. Feel
 							free to contact me!
 						</p>
@@ -157,15 +164,15 @@ import BackToTop from '../components/BackToTop.astro'
 				</div>
 			</div>
 		</Section>
-		<Section id="skills" title="Skills">
-			<h2 class="font-bold text-lg mb-2">Technical</h2>
+		<Section id="skills" title="Skills" data-aos="fade-up">
+			<h2 class="font-bold text-3xl mb-2">Technical</h2>
 			<hr />
 			{
 				technical.map((data) => (
 					<div class="py-2">
 						<div class="flex flex-col w-full">
 							<div class="divider divider-start">
-								<h2 class="text-sm font-semibold">{data.title}</h2>
+								<h2 class="text-xl font-semibold">{data.title}</h2>
 							</div>
 						</div>
 						<ul class="text-sm">
@@ -188,7 +195,7 @@ import BackToTop from '../components/BackToTop.astro'
 				))
 			}
 
-			<h2 class="font-bold text-lg mb-2 mt-2">Emotional</h2>
+			<h2 class="font-bold text-3xl mb-2 mt-2">Emotional</h2>
 			<hr />
 			<div class="py-2">
 				<ul class="text-sm">
@@ -214,7 +221,7 @@ import BackToTop from '../components/BackToTop.astro'
 				certificates.map((certificate) => (
 					<div class="flex flex-col w-full">
 						<div class="divider divider-start">
-							<h2 class="text-sm font-semibold">{certificate.title}</h2>
+							<h2 class="text-xl font-semibold">{certificate.title}</h2>
 						</div>
 						<ul class="grid grid-cols-2 gap-2">
 							{certificate.datalist &&
