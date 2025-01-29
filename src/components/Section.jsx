@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-const Section = ({ children, id, title }) => {
+const Section = ({ children, id, title, ...rest }) => {
   return (
-    <section id={id} className="py-5 px-8">
-      <h1 className="text-4xl font-bold text-center uppercase mb-3">{title}</h1>
+    <section id={id} className="py-5 px-8" {...rest}>
+      <h2 className="text-4xl font-bold text-center uppercase mb-3">{title}</h2>
       {children}
     </section>
   );
