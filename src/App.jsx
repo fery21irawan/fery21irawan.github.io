@@ -8,6 +8,7 @@ import Skills from "./components/Skills";
 import Certificate from "./components/Certificate";
 import Profile from "./components/Profile";
 import BackToTopButton from "./components/BackToTopButton";
+import Footer from "./components/Footer";
 
 function App() {
   useEffect(() => {
@@ -42,6 +43,7 @@ function App() {
           </Section>
         </div>
         <BackToTopButton />
+        <Footer />
       </main>
     </>
   );
