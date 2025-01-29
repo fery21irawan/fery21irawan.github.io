@@ -33,9 +33,9 @@ function Hero() {
           <SocialMedia />
         </div>
       </figure>
-      <section className="absolute bottom-20" data-aos="zoom-in">
+      <div className="absolute bottom-20" data-aos="zoom-in">
         <MouseIcon />
-      </section>
+      </div>
     </div>
   );
 }
