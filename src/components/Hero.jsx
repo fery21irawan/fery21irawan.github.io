@@ -18,7 +18,7 @@ function Hero() {
         <figcaption className="text-center mt-2">
           <h1 className="font-semibold text-2xl lg:text-5xl lg:mb-2">
             <span
-              className="flex justify-center items-end gap-x-1"
+              className="flex justify-center items-center gap-x-1"
               data-aos="fade-right"
             >
               {profile.name}
