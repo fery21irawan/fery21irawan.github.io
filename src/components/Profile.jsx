@@ -4,14 +4,14 @@ function Profile() {
   return (
     <div className="flex flex-col lg:flex-row-reverse lg:gap-5 w-full">
       <div className="lg:w-1/2 p-5">
-        <div>
+        <div className="overflow-hidden rounded-lg">
           <img
             src="https://avatars.githubusercontent.com/u/20228547?v=4"
             alt=""
-            srcSet=""
-            className="hidden md:block rounded shadow-sm hover:scale-90 hover:translate-x-4 hover:-translate-y-4 transition-transform duration-500"
+            className="hidden md:block shadow-sm transition-transform duration-[1000ms] ease-in-out hover:scale-[1.5] transform-origin-[50%_65%]"
           />
         </div>
+
         <div data-aos="zoom-in">
           <div className="flex justify-center gap-5 my-5">
             <div>
