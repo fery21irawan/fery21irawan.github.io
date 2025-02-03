@@ -9,6 +9,7 @@ import Certificate from "./components/Certificate";
 import Profile from "./components/Profile";
 import BackToTopButton from "./components/BackToTopButton";
 import Footer from "./components/Footer";
+import WorkList from "./components/WorkList";
 
 function App() {
   useEffect(() => {
@@ -40,6 +41,9 @@ function App() {
           </Section>
           <Section id="certificates" title="Certificates" data-aos="fade-up">
             <Certificate />
+          </Section>
+          <Section id="work" title="My Work" data-aos="fade-up">
+            <WorkList />
           </Section>
         </div>
         <BackToTopButton />
