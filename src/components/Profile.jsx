@@ -4,7 +4,7 @@ function Profile() {
   return (
     <div className="flex flex-col lg:flex-row-reverse lg:gap-5 w-full">
       <div className="lg:w-1/2 p-5">
-        <div className="overflow-hidden rounded-lg">
+        <div className="overflow-hidden rounded-lg" data-aos="zoom-in">
           <img
             src="https://avatars.githubusercontent.com/u/20228547?v=4"
             alt=""
